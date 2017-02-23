@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var ghPages = require('gulp-gh-pages');
 var gitbook = require('gitbook');
 var Q = require('q');
-
+var exec = require('child_process').exec;
 
 gulp.task('build', function(){
 	var book = new gitbook.Book('./public',{
@@ -22,8 +22,10 @@ gulp.task('deploy', function(){
 
 });
 
-gulp.task('serve', function(){
-
-	//do stuff
-
+gulp.task('serve', function(cb){
+	exec('nohup sudo -b node index.js',function(err, stdout, stderr){
+		console.log(stdout);
+		console.log(stderr);
+		cb(err);
+	});
 }); 
