@@ -7,8 +7,8 @@
     "generate-gitbook": "node scripts/generate-gitbook.js",
     "generate-wiki": "node scripts/generate-wiki.js",
     "build": "npm install && npm i gitbook-cli && npm run generate-gitbook && npm run generate-wiki",
-    "deploy-gitbook": "./scripts/losh deploy-gitbook",
-    "deploy-wiki": "./scripts/losh deploy-wiki",
+    "deploy-gitbook": "node ./scripts/deploy-gitbook.js",
+    "deploy-wiki": "node ./scripts/deploy-wiki.js",
     "deploy": "npm run build && npm run deploy-gitbook && npm run deploy-wiki",
     "version": "./scripts/losh version",
     "test": "echo \"Error: no test specified\" && exit 1"
