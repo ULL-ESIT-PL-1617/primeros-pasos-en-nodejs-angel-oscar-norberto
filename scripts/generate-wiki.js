@@ -22,6 +22,12 @@ function main() {
             if(err) {
                 return console.error(err);
             }
+	    fs.rename(path.join(output,'Home.md'),path.join(output, 'README.md'), function(){
+		console.log("Renombrado Home")
+	    });
+	    fs.rename(path.join(output,'_Sidebar.md'),path.join(output, 'SUMMARY.md'), function(){
+		console.log("Renombrado Sidebar")
+	    });
 
             console.log('generated wiki');
         });
