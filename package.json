@@ -4,8 +4,8 @@
   "description": "GitBook Boilerplate",
   "main": "index.js",
   "scripts": {
-    "generate-gitbook": "./scripts/losh generate-gitbook",
-    "generate-wiki": "./scripts/losh generate-wiki",
+    "generate-gitbook": "node scripts/generate-gitbook.js",
+    "generate-wiki": "node scripts/generate-wiki.js",
     "build": "npm install && npm i gitbook-cli && npm run generate-gitbook && npm run generate-wiki",
     "deploy-gitbook": "./scripts/losh deploy-gitbook",
     "deploy-wiki": "./scripts/losh deploy-wiki",
